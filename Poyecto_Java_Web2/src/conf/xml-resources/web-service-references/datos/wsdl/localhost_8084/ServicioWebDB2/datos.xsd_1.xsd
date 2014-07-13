@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://proyecto.ws/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://proyecto.ws/">
+
+<xs:element name="AltaRecorrido" type="tns:AltaRecorrido" />
+
+<xs:element name="AltaRecorridoResponse" type="tns:AltaRecorridoResponse" />
+
+<xs:element name="BorrarRecorrido" type="tns:BorrarRecorrido" />
+
+<xs:element name="BorrarRecorridoResponse" type="tns:BorrarRecorridoResponse" />
+
+<xs:element name="Register" type="tns:Register" />
+
+<xs:element name="RegisterResponse" type="tns:RegisterResponse" />
+
+<xs:complexType name="AltaRecorrido">
+<xs:sequence>
+<xs:element name="idUsuario" type="xs:int" />
+<xs:element name="idRecorrido" type="xs:int" />
+<xs:element name="niños" type="xs:int" />
+<xs:element name="adultos" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="AltaRecorridoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="Register">
+<xs:sequence>
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="apellidos" type="xs:string" minOccurs="0" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="password" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="RegisterResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BorrarRecorrido">
+<xs:sequence>
+<xs:element name="idRecorrido" type="xs:int" />
+<xs:element name="idUsuario" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="BorrarRecorridoResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
